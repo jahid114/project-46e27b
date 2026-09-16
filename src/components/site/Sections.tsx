@@ -279,8 +279,9 @@ const CATEGORIES = [
 ];
 
 export function Products() {
-  const [active, setActive] = useState(CATEGORIES[0].id);
-  const current = CATEGORIES.find((c) => c.id === active) ?? CATEGORIES[0];
+  const [active, setActive] = useState<string>("knit");
+  const current = CATEGORIES.find((c) => c.id === active) ?? CATEGORIES[0]!;
+
 
   return (
     <section id="products" className="section-pad bg-secondary">

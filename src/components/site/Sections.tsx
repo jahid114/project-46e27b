@@ -17,6 +17,7 @@ import {
   Zap,
 } from "lucide-react";
 import heroImg from "@/assets/hero-factory.jpg";
+import officeImg from "@/assets/office.jpg.asset.json";
 import knitImg from "@/assets/product-knit.jpg";
 import wovenImg from "@/assets/product-woven.jpg";
 import sweaterImg from "@/assets/product-sweater.jpg";
@@ -54,7 +55,8 @@ export function Hero() {
         fetchPriority="high"
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 -z-10 bg-navy-deep/85" aria-hidden />
+      <div className="hero-veil absolute inset-0 -z-10" aria-hidden />
+      <div className="hero-veil-base absolute inset-x-0 bottom-0 -z-10 h-1/2" aria-hidden />
       <div className="mx-auto max-w-7xl px-5 py-28 md:py-40 lg:px-8">
         <p className="eyebrow text-accent">Your Trust Is Our Strength</p>
         <h1 className="mt-6 max-w-4xl text-4xl leading-[1.08] text-primary-foreground md:text-6xl">
@@ -103,33 +105,51 @@ export function Hero() {
 export function About() {
   return (
     <section id="about" className="section-pad">
-      <div className="mx-auto grid max-w-7xl gap-14 px-5 lg:grid-cols-[1.1fr_1fr] lg:px-8">
-        <div>
-          <SectionHeading
-            eyebrow="About Us"
-            title="Established in 2026, built on supply channels that hold under pressure"
-            intro="Eminent Sourcing Ltd is a 100% export-oriented garments buying house based in Chittagong, Bangladesh. Our strong supply channel gives us the capacity to handle large-quantity orders at competitive prices within a short lead time."
-          />
-          <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
-            A skilled team of merchandisers and QA inspectors oversees delivery time, production
-            supervision and quality control at every stage — so buyers receive a shipment that
-            matches the approved sample, not a surprise.
-          </p>
-          <div className="mt-10 rule-gold pt-6">
-            <p className="eyebrow text-primary">Markets we serve</p>
-            <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-              {["USA", "Canada", "United Kingdom", "Australia", "New Zealand", "Europe"].map(
-                (m) => (
-                  <li key={m} className="border-l border-accent pl-3">
-                    {m}
-                  </li>
-                ),
-              )}
-            </ul>
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="grid gap-14 lg:grid-cols-[1.1fr_1fr]">
+          <div>
+            <SectionHeading
+              eyebrow="About Us"
+              title="Established in 2026, built on supply channels that hold under pressure"
+              intro="Eminent Sourcing Ltd is a 100% export-oriented garments buying house based in Chittagong, Bangladesh. Our strong supply channel gives us the capacity to handle large-quantity orders at competitive prices within a short lead time."
+            />
+            <p className="mt-6 max-w-2xl leading-relaxed text-muted-foreground">
+              A skilled team of merchandisers and QA inspectors oversees delivery time, production
+              supervision and quality control at every stage — so buyers receive a shipment that
+              matches the approved sample, not a surprise.
+            </p>
+            <div className="mt-10 rule-gold pt-6">
+              <p className="eyebrow text-primary">Markets we serve</p>
+              <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
+                {["USA", "Canada", "United Kingdom", "Australia", "New Zealand", "Europe"].map(
+                  (m) => (
+                    <li key={m} className="border-l border-accent pl-3">
+                      {m}
+                    </li>
+                  ),
+                )}
+              </ul>
+            </div>
           </div>
+
+          <figure className="flex flex-col self-start">
+            <img
+              src={officeImg.url}
+              alt="Eminent Sourcing Ltd office and sample showroom in Chittagong, with a buyer meeting table and garment sample racks"
+              width={1175}
+              height={896}
+              loading="lazy"
+              className="aspect-[4/3] w-full border border-border object-cover"
+            />
+            <figcaption className="mt-4 flex items-start gap-3 text-sm leading-relaxed text-muted-foreground">
+              <span className="mt-2 h-px w-8 shrink-0 bg-accent" aria-hidden />
+              Our office and sample showroom in Chawak Bazar, Chittagong — where buyer meetings,
+              sample reviews and fabric approvals take place.
+            </figcaption>
+          </figure>
         </div>
 
-        <div className="grid gap-px bg-border">
+        <div className="mt-14 grid gap-px bg-border md:grid-cols-2">
           <article className="bg-primary p-9 text-primary-foreground">
             <p className="eyebrow text-accent">Our Vision</p>
             <p className="mt-5 leading-relaxed text-primary-foreground/85">

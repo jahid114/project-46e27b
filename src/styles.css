@@ -128,3 +128,20 @@
   text-transform: uppercase;
   line-height: 1.05;
 }
+
+@utility hero-veil {
+  background-image: linear-gradient(
+    to right,
+    color-mix(in oklab, var(--color-navy-deep) 90%, transparent),
+    color-mix(in oklab, var(--color-navy-deep) 68%, transparent) 55%,
+    color-mix(in oklab, var(--color-navy-deep) 34%, transparent)
+  );
+}
+
+@utility hero-veil-base {
+  background-image: linear-gradient(
+    to top,
+    color-mix(in oklab, var(--color-navy-deep) 68%, transparent),
+    transparent
+  );
+}

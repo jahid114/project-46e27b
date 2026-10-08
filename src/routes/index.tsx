@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
+import { FabricSpecifications } from "@/components/site/FabricSpecifications";
 import {
   About,
   Compliance,
@@ -64,6 +65,7 @@ function Index() {
         <Values />
         <Services />
         <Products />
+        <FabricSpecifications />
         <Compliance />
         <Terms />
         <Contact />

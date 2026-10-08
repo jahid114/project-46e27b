@@ -17,6 +17,7 @@ import {
   Zap,
 } from "lucide-react";
 import heroImg from "@/assets/hero-factory.jpg";
+import officeImg from "@/assets/office.jpg.asset.json";
 import knitImg from "@/assets/product-knit.jpg";
 import wovenImg from "@/assets/product-woven.jpg";
 import sweaterImg from "@/assets/product-sweater.jpg";
@@ -54,7 +55,8 @@ export function Hero() {
         fetchPriority="high"
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 -z-10 bg-navy-deep/85" aria-hidden />
+      <div className="hero-veil absolute inset-0 -z-10" aria-hidden />
+      <div className="hero-veil-base absolute inset-x-0 bottom-0 -z-10 h-1/2" aria-hidden />
       <div className="mx-auto max-w-7xl px-5 py-28 md:py-40 lg:px-8">
         <p className="eyebrow text-accent">Your Trust Is Our Strength</p>
         <h1 className="mt-6 max-w-4xl text-4xl leading-[1.08] text-primary-foreground md:text-6xl">

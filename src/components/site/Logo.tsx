@@ -1,4 +1,6 @@
-import monogram from "@/assets/es-monogram.png";
+import monogramAsset from "@/assets/es-monogram.png.asset.json";
+
+const monogram = monogramAsset.url;
 
 export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
   return (
